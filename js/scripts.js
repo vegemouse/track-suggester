@@ -109,6 +109,28 @@ $(function() {
     }
   }
 
+  var refreshPage = function() {
+    $("#questionOne").hide();
+    $("#questionTwo").hide();
+    $("#questionThree").hide();
+    $("#questionFour").hide();
+    $("#questionFive").hide();
+    $("#questionSix").hide();
+    $("#rails").hide();
+    $("#drupal").hide();
+    $("#android").hide();
+    $("#net").hide();
+    $("#design").hide();
+    $("#intro").fadeIn(1000);
+
+    // Restarts answer count
+    railsCount = 0;
+    drupalCount = 0;
+    androidCount = 0;
+    designCount = 0;
+    netCount = 0;
+  }
+
   // Front end
   $("#startButton").click(function() {
     $("#intro").hide();
@@ -160,27 +182,7 @@ $(function() {
 
   // "Refreshes" page rather than using 'location.reload()'
   $(".refresh").click(function() {
-    $("#questionOne").hide();
-    $("#questionTwo").hide();
-    $("#questionThree").hide();
-    $("#questionFour").hide();
-    $("#questionFive").hide();
-    $("#questionSix").hide();
-    $("#rails").hide();
-    $("#drupal").hide();
-    $("#android").hide();
-    $("#net").hide();
-    $("#design").hide();
-    $("#intro").fadeIn(1000);
-
-    // Restarts answer count
-    railsCount = 0;
-    drupalCount = 0;
-    androidCount = 0;
-    designCount = 0;
-    netCount = 0;
-
-
+    refreshPage();
   })
 
 })
