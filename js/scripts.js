@@ -115,34 +115,35 @@ $(function() {
   $("#questionOneForm").submit(function(event) {
     $("#questionOne").hide( "slide", {direction: "left"}, 500);
     $("#questionTwo").delay(600).show( "slide", {direction: "right"}, 500);
+    $("questionTwo").css("display", "inline-block");
     questionOneCount();
     event.preventDefault();
   })
 
   $("#questionTwoForm").submit(function(event) {
     $("#questionTwo").hide( "slide", {direction: "left"}, 500);
-    $("#questionThree").delay(600).show( "slide", {direction: "right"}, 500);
+    $("#questionThree").delay(600).show( "slide", {direction: "right"}, 750);
     questionTwoCount();
     event.preventDefault();
   })
 
   $("#questionThreeForm").submit(function(event) {
     $("#questionThree").hide( "slide", {direction: "left"}, 500);
-    $("#questionFour").delay(600).show( "slide", {direction: "right"}, 500);
+    $("#questionFour").delay(600).show( "slide", {direction: "right"}, 750);
     questionThreeCount();
     event.preventDefault();
   })
 
   $("#questionFourForm").submit(function(event) {
     $("#questionFour").hide( "slide", {direction: "left"}, 500);
-    $("#questionFive").delay(600).show( "slide", {direction: "right"}, 500);
+    $("#questionFive").delay(600).show( "slide", {direction: "right"}, 750);
     questionFourCount();
     event.preventDefault();
   })
 
   $("#questionFiveForm").submit(function(event) {
     $("#questionFive").hide( "slide", {direction: "left"}, 500);
-    $("#questionSix").delay(600).show( "slide", {direction: "right"}, 500);
+    $("#questionSix").delay(600).show( "slide", {direction: "right"}, 750);
     questionFourCount();
     event.preventDefault();
   })
