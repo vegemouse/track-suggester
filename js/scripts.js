@@ -1,32 +1,137 @@
 $(function() {
+  var railsCount = 0;
+  var drupalCount = 0;
+  var androidCount = 0;
+  var designCount = 0;
+  var netCount = 0;
+
+  var questionOneCount = function() {
+
+    if($("input:radio[name=question1]:checked").val() === "rails") {
+      railsCount++;
+    } else if ($("input:radio[name=question1]:checked").val() === "drupal") {
+      drupalCount++;
+    } else if ($("input:radio[name=question1]:checked").val() === "android") {
+      androidCount++;
+    } else if ($("input:radio[name=question1]:checked").val() === "design") {
+      designCount++;
+    } else if ($("input:radio[name=question1]:checked").val() === "net") {
+      netCount++;
+    }
+  }
+
+  var questionTwoCount = function() {
+    if($("input:radio[name=question2]:checked").val() === "rails") {
+      railsCount++;
+    } else if ($("input:radio[name=question2]:checked").val() === "drupal") {
+      drupalCount++;
+    } else if ($("input:radio[name=question2]:checked").val() === "android") {
+      androidCount++;
+    } else if ($("input:radio[name=question2]:checked").val() === "design") {
+      designCount++;
+    } else if ($("input:radio[name=question2]:checked").val() === "net") {
+      netCount++;
+    }
+  }
+
+  var questionThreeCount = function() {
+    if($("input:radio[name=question3]:checked").val() === "rails") {
+      railsCount++;
+    } else if ($("input:radio[name=question3]:checked").val() === "drupal") {
+      drupalCount++;
+    } else if ($("input:radio[name=question3]:checked").val() === "android") {
+      androidCount++;
+    } else if ($("input:radio[name=question3]:checked").val() === "design") {
+      designCount++;
+    } else if ($("input:radio[name=question3]:checked").val() === "net") {
+      netCount++;
+    }
+  }
+
+  var questionFourCount = function() {
+    if($("input:radio[name=question4]:checked").val() === "rails") {
+      railsCount++;
+    } else if ($("input:radio[name=question4]:checked").val() === "drupal") {
+      drupalCount++;
+    } else if ($("input:radio[name=question4]:checked").val() === "android") {
+      androidCount++;
+    } else if ($("input:radio[name=question4]:checked").val() === "design") {
+      designCount++;
+    } else if ($("input:radio[name=question4]:checked").val() === "net") {
+      netCount++;
+    }
+  }
+
+  var questionFiveCount = function() {
+    if($("input:radio[name=question5]:checked").val() === "rails") {
+      railsCount++;
+    } else if ($("input:radio[name=question5]:checked").val() === "drupal") {
+      drupalCount++;
+    } else if ($("input:radio[name=question5]:checked").val() === "android") {
+      androidCount++;
+    } else if ($("input:radio[name=question5]:checked").val() === "design") {
+      designCount++;
+    } else if ($("input:radio[name=question5]:checked").val() === "net") {
+      netCount++;
+    }
+  }
+
+  var countAnswer = function() {
+    if(railsCount > (drupalCount || androidCount || designCount || netCount)) {
+      $("#rails").show();
+    } else if (drupalCount > (railsCount || androidCount || designCount || netCount)) {
+      $("#drupal").show();
+    } else if (androidCount > (railsCount || drupalCount || designCount || netCount)) {
+      $("#android").show();
+    } else if (designCount > (railsCount || androidCount || drupalCount || netCount)) {
+      $("#design").show();
+    } else if (netCount > (railsCount || androidCount || drupalCount || designCount)) {
+      $("#net").show();
+    } else {
+      $("#undecided").show();
+    }
+  }
+
+  // Front end
   $("#startButton").click(function() {
     $("#intro").hide();
     $("#questionOne").fadeIn(500);
   })
 
-  $("#buttonOne").click(function() {
+  $("#questionOneForm").submit(function(event) {
     $("#questionOne").hide();
     $("#questionTwo").fadeIn(500);
+    questionOneCount();
+    event.preventDefault();
   })
 
-  $("#buttonTwo").click(function() {
+  $("#questionTwoForm").submit(function(event) {
     $("#questionTwo").hide();
     $("#questionThree").fadeIn(500);
+    questionTwoCount();
+    event.preventDefault();
   })
 
-  $("#buttonThree").click(function() {
+  $("#questionThreeForm").submit(function(event) {
     $("#questionThree").hide();
     $("#questionFour").fadeIn(500);
+    questionThreeCount();
+    event.preventDefault();
   })
 
-  $("#buttonFour").click(function() {
+  $("#questionFourForm").submit(function(event) {
     $("#questionFour").hide();
     $("#questionFive").fadeIn(500);
+    questionFourCount();
+    event.preventDefault();
   })
 
-  $("#buttonFive").click(function() {
-    $("#questionFour").hide();
-    //if statement for results
+  $("#questionFiveForm").submit(function(event) {
+    $("#questionFive").hide();
+    $("#questionSix").fadeIn(500);
+    questionFiveCount();
+    countAnswer();
+    event.preventDefault();
   })
 
 })
