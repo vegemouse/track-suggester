@@ -1,3 +1,15 @@
 #questionOne, #questionTwo, #questionThree, #questionFour, #questionFive, #questionSix, #rails, #drupal, #android, #design, #net, #undecided {
   display: none;
+  padding: 1px;
+}
+
+input[type=radio] {
+  width: 9em;
+}
+
+label {
+  font-size: 1.5em;
+}
+label:hover {
+  background-color: lightgrey;
 }

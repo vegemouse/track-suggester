@@ -4,6 +4,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
     <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script src="js/scripts.js"></script>
     <meta charset="utf-8">
     <title>Epicodus Track Suggester</title>
@@ -18,131 +19,133 @@
         <p>Choosing a track for Epicodus may seem daunting, especially if you don't know the ins and outs of programming. This quick quiz will suggest a track for you based on your interests and expectations.</p>
         <button id="startButton" class="btn btn-primary">Get started</button>
       </div>
-      <div id="questionOne">
-        <form id="questionOneForm">
-          <h2>Question One</h2>
-          <div class="radio">
-            <label><input type="radio" name="question1" value="rails">Rails answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question1" value="drupal">Drupal answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question1" value="android">Android answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question1" value="design">Design answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question1" value="net">Net answer</label>
-          </div>
-          <button class="btn btn-primary" type="submit">Next</button>
-        </form>
-      </div>
-      <div id="questionTwo">
-        <form id="questionTwoForm">
-          <h2>Question Two</h2>
-          <div class="radio">
-            <label><input type="radio" name="question2" value="rails">Rails answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question2" value="drupal">Drupal answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question2" value="android">Android answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question2" value="design">Design answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question2" value="net">Net answer</label>
-          </div>
-          <button class="btn btn-primary" type="submit">Next</button>
-        </form>
-      </div>
-      <div id="questionThree">
-        <form id="questionThreeForm">
-          <h2>Question Three</h2>
-          <div class="radio">
-            <label><input type="radio" name="question3" value="rails">Rails answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question3" value="drupal">Drupal answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question3" value="android">Android answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question3" value="design">Design answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question3" value="net">Net answer</label>
-          </div>
-          <button class="btn btn-primary" type="submit">Next</button>
-        </form>
-      </div>
-      <div id="questionFour">
-        <form id="questionFourForm">
-          <h2>Question Four</h2>
-          <div class="radio">
-            <label><input type="radio" name="question4" value="rails">Rails answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question4" value="drupal">Drupal answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question4" value="android">Android answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question4" value="design">Design answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question4" value="net">Net answer</label>
-          </div>
-          <button class="btn btn-primary" type="submit">Next</button>
-        </form>
-      </div>
-      <div id="questionFive">
-        <form id="questionFiveForm">
-          <h2>Question Five</h2>
-          <div class="radio">
-            <label><input type="radio" name="question5" value="rails">Rails answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question5" value="drupal">Drupal answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question5" value="android">Android answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question5" value="design">Design answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question5" value="net">Net answer</label>
-          </div>
-          <button class="btn btn-primary" type="submit">Next</button>
-        </form>
-      </div>
-      <div id="questionSix">
-        <form id="questionSixForm">
-          <h2>Question Six</h2>
-          <div class="radio">
-            <label><input type="radio" name="question6" value="rails">Rails answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question6" value="drupal">Drupal answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question6" value="android">Android answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question6" value="design">Design answer</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="question6" value="net">Net answer</label>
-          </div>
-          <button class="btn btn-primary" type="submit">Next</button>
-        </form>
+      <div id="questions">
+        <div id="questionOne">
+          <form id="questionOneForm">
+            <h2>Question One</h2>
+            <div class="radio">
+              <label><input type="radio" name="question1" value="rails">Rails answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question1" value="drupal">Drupal answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question1" value="android">Android answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question1" value="design">Design answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question1" value="net">Net answer</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Next</button>
+          </form>
+        </div>
+        <div id="questionTwo">
+          <form id="questionTwoForm">
+            <h2>Question Two</h2>
+            <div class="radio">
+              <label><input type="radio" name="question2" value="rails">Rails answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question2" value="drupal">Drupal answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question2" value="android">Android answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question2" value="design">Design answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question2" value="net">Net answer</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Next</button>
+          </form>
+        </div>
+        <div id="questionThree">
+          <form id="questionThreeForm">
+            <h2>Question Three</h2>
+            <div class="radio">
+              <label><input type="radio" name="question3" value="rails">Rails answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question3" value="drupal">Drupal answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question3" value="android">Android answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question3" value="design">Design answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question3" value="net">Net answer</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Next</button>
+          </form>
+        </div>
+        <div id="questionFour">
+          <form id="questionFourForm">
+            <h2>Question Four</h2>
+            <div class="radio">
+              <label><input type="radio" name="question4" value="rails">Rails answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question4" value="drupal">Drupal answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question4" value="android">Android answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question4" value="design">Design answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question4" value="net">Net answer</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Next</button>
+          </form>
+        </div>
+        <div id="questionFive">
+          <form id="questionFiveForm">
+            <h2>Question Five</h2>
+            <div class="radio">
+              <label><input type="radio" name="question5" value="rails">Rails answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question5" value="drupal">Drupal answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question5" value="android">Android answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question5" value="design">Design answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question5" value="net">Net answer</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Next</button>
+          </form>
+        </div>
+        <div id="questionSix">
+          <form id="questionSixForm">
+            <h2>Question Six</h2>
+            <div class="radio">
+              <label><input type="radio" name="question6" value="rails">Rails answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question6" value="drupal">Drupal answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question6" value="android">Android answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question6" value="design">Design answer</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="question6" value="net">Net answer</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Next</button>
+          </form>
+        </div>
       </div>
       <div id="rails">You got rails!</div>
       <div id="drupal">You got drupal!</div>

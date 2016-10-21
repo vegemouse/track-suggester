@@ -113,36 +113,36 @@ $(function() {
   })
 
   $("#questionOneForm").submit(function(event) {
-    $("#questionOne").hide();
-    $("#questionTwo").fadeIn(750);
+    $("#questionOne").hide( "slide", {direction: "left"}, 500);
+    $("#questionTwo").delay(600).show( "slide", {direction: "right"}, 500);
     questionOneCount();
     event.preventDefault();
   })
 
   $("#questionTwoForm").submit(function(event) {
-    $("#questionTwo").hide();
-    $("#questionThree").fadeIn(750);
+    $("#questionTwo").hide( "slide", {direction: "left"}, 500);
+    $("#questionThree").delay(600).show( "slide", {direction: "right"}, 500);
     questionTwoCount();
     event.preventDefault();
   })
 
   $("#questionThreeForm").submit(function(event) {
-    $("#questionThree").hide();
-    $("#questionFour").fadeIn(750);
+    $("#questionThree").hide( "slide", {direction: "left"}, 500);
+    $("#questionFour").delay(600).show( "slide", {direction: "right"}, 500);
     questionThreeCount();
     event.preventDefault();
   })
 
   $("#questionFourForm").submit(function(event) {
-    $("#questionFour").hide();
-    $("#questionFive").fadeIn(750);
+    $("#questionFour").hide( "slide", {direction: "left"}, 500);
+    $("#questionFive").delay(600).show( "slide", {direction: "right"}, 500);
     questionFourCount();
     event.preventDefault();
   })
 
   $("#questionFiveForm").submit(function(event) {
-    $("#questionFive").hide();
-    $("#questionSix").fadeIn(750);
+    $("#questionFive").hide( "slide", {direction: "left"}, 500);
+    $("#questionSix").delay(600).show( "slide", {direction: "right"}, 500);
     questionFourCount();
     event.preventDefault();
   })
