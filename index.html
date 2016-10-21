@@ -3,6 +3,7 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round" rel="stylesheet">
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/scripts.js"></script>
@@ -12,144 +13,196 @@
   <body>
     <div class="container-fluid">
       <div id="intro">
-          <h1>Track Suggester</h1>
+          <h1>Epicodus Track Suggester</h1>
           <p>Choosing a track for Epicodus may seem daunting, especially if you don't know the ins and outs of programming. This quick quiz will suggest a track for you based on your interests and expectations.</p>
+          <div class="row" id="logos">
+            <img src="img/rails.png" alt="Rails Logo" class="img-responsive logo">
+            <img src="img/drupal.png" alt="Drupal Logo" class="img-responsive logo">
+            <img src="img/android.png" alt="Android Logo" class="img-responsive logo">
+            <img src="img/net.png" alt=".Net Logo" class="img-responsive logo">
+            <img src="img/design.png" alt="Design Logo" class="img-responsive logo">
+          </div>
           <button id="startButton" class="btn btn-primary btn-lg">Get started</button>
       </div>
       <div id="questions">
         <div id="questionOne">
           <form id="questionOneForm">
-            <h2>Question One</h2>
+            <h2>What type of company best fits your idea of where you'd like to work?</h2>
             <div class="radio">
-              <label><input type="radio" name="question1" value="rails">Rails answer</label>
+              <label><input type="radio" name="question1" value="rails" checked="checked">A younger company or startup</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question1" value="drupal">Drupal answer</label>
+              <label><input type="radio" name="question1" value="drupal">A company that focuses on content-driven websites</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question1" value="android">Android answer</label>
+              <label><input type="radio" name="question1" value="android">I'd like to be able to work at any type of company</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question1" value="design">Design answer</label>
+              <label><input type="radio" name="question1" value="design">I'd like to work for myself, or as a front-end developer at a company</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question1" value="net">Net answer</label>
+              <label><input type="radio" name="question1" value="net">A large, established, enterprise company or government agency</label>
             </div>
             <button class="btn btn-primary" type="submit">Next</button>
           </form>
         </div>
         <div id="questionTwo">
           <form id="questionTwoForm">
-            <h2>Question Two</h2>
+            <h2>What do you like most about development?</h2>
             <div class="radio">
-              <label><input type="radio" name="question2" value="rails">Rails answer</label>
+              <label><input type="radio" name="question2" value="drupal" checked="checked">Creating full, data-rich websites and applications</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question2" value="drupal">Drupal answer</label>
+              <label><input type="radio" name="question2" value="design">Wowing the user with impressive UI/UX design</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question2" value="android">Android answer</label>
+              <label><input type="radio" name="question2" value="android">Being able to program anything from coffee makers to mobile phones</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question2" value="design">Design answer</label>
+              <label><input type="radio" name="question2" value="net">Making lots of money, obviously</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question2" value="net">Net answer</label>
+              <label><input type="radio" name="question2" value="rails">Be able to quickly show off my skills using an intuitive programming language</label>
             </div>
             <button class="btn btn-primary" type="submit">Next</button>
           </form>
         </div>
         <div id="questionThree">
           <form id="questionThreeForm">
-            <h2>Question Three</h2>
+            <h2>What would you most like to learn?</h2>
             <div class="radio">
-              <label><input type="radio" name="question3" value="rails">Rails answer</label>
+              <div class="radio">
+                <label><input type="radio" name="question3" value="design" checked="checked">How to create beautiful websites</label>
+              </div>
+              <label><input type="radio" name="question3" value="android">A widely used programming language as well as mobile applications</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question3" value="drupal">Drupal answer</label>
+              <label><input type="radio" name="question3" value="rails">How to build quick, interactive web applications</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question3" value="android">Android answer</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="question3" value="design">Design answer</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="question3" value="net">Net answer</label>
+              <label><input type="radio" name="question3" value="net">A software framework that will help get a good paying job</label>
+              <div class="radio">
+                <label><input type="radio" name="question3" value="drupal">How to use a content management system to build websites</label>
+              </div>
             </div>
             <button class="btn btn-primary" type="submit">Next</button>
           </form>
         </div>
         <div id="questionFour">
           <form id="questionFourForm">
-            <h2>Question Four</h2>
+            <h2>Would you like to learn something more in demand, or more fun to use?</h2>
             <div class="radio">
-              <label><input type="radio" name="question4" value="rails">Rails answer</label>
+              <label><input type="radio" name="question4" value="drupal" checked="checked">Something in demand that is useful in any situation</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question4" value="drupal">Drupal answer</label>
+              <label><input type="radio" name="question4" value="net">Something that will get me a job quick!</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question4" value="android">Android answer</label>
+              <label><input type="radio" name="question4" value="android">Something that is in demand across the country</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question4" value="design">Design answer</label>
+              <label><input type="radio" name="question4" value="design">Something in demand that shows off my skills as a developer</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question4" value="net">Net answer</label>
+              <label><input type="radio" name="question4" value="rails">Both are important to me, but I'd rather enjoy my time spent coding</label>
             </div>
             <button class="btn btn-primary" type="submit">Next</button>
           </form>
         </div>
         <div id="questionFive">
           <form id="questionFiveForm">
-            <h2>Question Five</h2>
+            <h2>Which of these languages are you most interested in?</h2>
             <div class="radio">
-              <label><input type="radio" name="question5" value="rails">Rails answer</label>
+              <label><input type="radio" name="question5" value="rails" checked="checked">Ruby</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question5" value="drupal">Drupal answer</label>
+              <label><input type="radio" name="question5" value="drupal">PHP</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question5" value="android">Android answer</label>
+              <label><input type="radio" name="question5" value="android">Java</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question5" value="design">Design answer</label>
+              <label><input type="radio" name="question5" value="design">CSS</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question5" value="net">Net answer</label>
+              <label><input type="radio" name="question5" value="net">C#</label>
             </div>
             <button class="btn btn-primary" type="submit">Next</button>
           </form>
         </div>
         <div id="questionSix">
           <form id="questionSixForm">
-            <h2>Question Six</h2>
+            <h2>How important is user interaction to the websites you'd like to build?</h2>
             <div class="radio">
-              <label><input type="radio" name="question6" value="rails">Rails answer</label>
+              <label><input type="radio" name="question6" value="android" checked="checked">Somewhat important</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question6" value="drupal">Drupal answer</label>
+              <label><input type="radio" name="question6" value="rails">Very important -- it's how the website functions</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question6" value="android">Android answer</label>
+              <label><input type="radio" name="question6" value="net">Pretty important, as most of the users will be employees</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question6" value="design">Design answer</label>
+              <label><input type="radio" name="question6" value="design">It's the most important thing about development</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="question6" value="net">Net answer</label>
+              <label><input type="radio" name="question6" value="drupal">Not very</label>
             </div>
             <button class="btn btn-primary" type="submit">Find out!</button>
           </form>
         </div>
       </div>
-      <div id="rails"><p>You got rails!</p><button class="refresh btn btn-primary">Try Again?</button></div>
-      <div id="drupal"><p>You got drupal!</p><button class="refresh btn btn-primary">Try Again?</button></div>
-      <div id="android"><p>You got android!</p><button class="refresh btn btn-primary">Try Again?</button></div>
+      <div id="rails">
+        <div class="container">
+          <div class="jumbotron">
+            <h1>Rails Track</h1>
+            <p>Ruby and Rails are typically used by younger companies and startups, especially for building interactive web applications. Portland companies using Ruby and Rails who have hired Epicodus graduates include <a href="http://newrelic.com/" target="_blank">New Relic</a>, <a href="http://livingsocial.com/" target="_blank">LivingSocial</a>, and <a href="https://www.spendwellhealth.com/" target="_blank">SpendWell</a>.</p>
+            <a href="http://www.epicodus.com/intro-to-programming"><img src="img/intro.png" alt="Intro to Programming" class="img-responsive logo"></a>
+            <a href="http://www.epicodus.com/ruby"><img src="img/ruby.png" alt="Ruby logo" class="img-responsive logo"></a>
+            <a href="http://www.epicodus.com/javascript"><img src="img/js.png" alt="JavaScript logo" class="img-responsive logo"></a>
+            <a href="http://www.epicodus.com/rails"><img src="img/rails.png" alt="Rails logo" class="img-responsive logo"></a>
+            <a href="http://www.epicodus.com/internships"><img src="img/internship.png" alt="internship" class="img-responsive logo"></a>
+            <img src="img/graduation.png" alt="graduation" class="img-responsive logo"><br><br>
+            <button class="refresh btn btn-primary">Try Again?</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="drupal">
+        <div class="container">
+          <div class="jumbotron">
+            <h1>Drupal Track</h1>
+            <p>PHP and Drupal are typically used to build content-focused websites. Portland companies using PHP and Drupal who have hired Epicodus graduates include <a href="http://www.intel.com/" target="_blank">Intel</a>, <a href="http://www.metaltoad.com/" target="_blank">Metal Toad</a>, and <a href="https://www.opensesame.com/" target="_blank">OpenSesame</a>.</p>
+            <a href="http://www.epicodus.com/intro-to-programming"><img src="img/intro.png" alt="Intro to Programming" class="img-responsive logo"></a>
+            <a href="http://www.epicodus.com/php"><img src="img/php.png" alt="PHP logo" class="img-responsive logo"></a>
+            <a href="http://www.epicodus.com/javascript"><img src="img/js.png" alt="JavaScript logo" class="img-responsive logo"></a>
+            <a href="http://www.epicodus.com/drupal"><img src="img/drupal.png" alt="Drupal logo" class="img-responsive logo"></a>
+            <a href="http://www.epicodus.com/internships"><img src="img/internship.png" alt="internship" class="img-responsive logo"></a>
+            <img src="img/graduation.png" alt="graduation" class="img-responsive logo"><br><br>
+            <button class="refresh btn btn-primary">Try Again?</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="android">
+        <div class="container">
+          <div class="jumbotron">
+            <h1>Android Track</h1>
+            <p>Android development is used in everything from phones to tablets to watches, and companies hiring Android developers range from small startups to giant enterprises. Our first Android class finishes in late 2015, and Portland companies who helped us get it off the ground include <a href="http://ebay.com/" target="_blank">eBay</a> and <a href="https://uncorkedstudios.com/" target="_blank">Uncorked Studios.</p>
+            <a href="http://www.epicodus.com/intro-to-programming"><img src="img/intro.png" alt="Intro to Programming" class="img-responsive logo"></a>
+            <a href="http://www.epicodus.com/java"><img src="img/java.png" alt="Java logo" class="img-responsive logo"></a>
+            <a href="http://www.epicodus.com/javascript"><img src="img/js.png" alt="JavaScript logo" class="img-responsive logo"></a>
+            <a href="http://www.epicodus.com/android"><img src="img/android.png" alt="Android logo" class="img-responsive logo"></a>
+            <a href="http://www.epicodus.com/internships"><img src="img/internship.png" alt="internship" class="img-responsive logo"></a>
+            <img src="img/graduation.png" alt="graduation" class="img-responsive logo"><br><br>
+            <button class="refresh btn btn-primary">Try Again?</button>
+          </div>
+        </div>
+      </div>
+
       <div id="design"><p>You got design!</p><button class="refresh btn btn-primary">Try Again?</button></div>
       <div id="net"><p>You got .net!</p><button class="refresh btn btn-primary">Try Again?</button></div>
-      <div id="undecided"><p>There doesn't seem to be a specific path for you based on your answers. I recommend trying again if you'd like a more specific result.</p><button class="refresh" class="btn btn-primary">Try Again?</button></div>
+      <div id="undecided"><p>There doesn't seem to be a specific path for you based on your answers. I recommend trying again if you'd like a more specific result.</p><button class="refresh btn btn-primary">Try Again?</button></div>
     </div> <!-- Close container -->
   </body>
 </html>

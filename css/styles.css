@@ -1,24 +1,105 @@
 body {
   margin: 0;
+  background-color: #FFF;
+  color: #444;
+}
+
+a {
+  color: #00B3B4;
+}
+
+a:hover {
+  color: #11C4C5;
+}
+
+h1, h2, h3 {
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bolder;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+#intro h1 {
+  font-size: 4em;
+  margin-bottom: 35px;
+}
+
+#intro p {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+#rails {
+  height:
+}
+
+.btn-primary {
+  background-color: white;
+  color: #00B3B4;
+  border: 2px solid #00B3B4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn-primary:hover {
+  background-color: #00B3B4;
+  color: white;
+  border: 2px solid #00B3B4;
+}
+
+.btn-primary:active:focus {
+  background-color: #4DCACB;
+  border: 1px solid #3CB9BA;
+}
+
+#logos {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.logo {
+  display: inline;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #questionOne, #questionTwo, #questionThree, #questionFour, #questionFive, #questionSix, #rails, #drupal, #android, #design, #net, #undecided {
   display: none;
+  margin-top: 25vh;
+  margin-bottom: 25vh;
 }
 
 #intro, #questionOne, #questionTwo, #questionThree, #questionFour, #questionFive, #questionSix {
   padding: 1px 20px;
   text-align: center;
-  margin-top: 30vh;
-}
-
-#intro p {
-  font-size: 1.5em;
+  margin-top: 25vh;
+  margin-bottom: 25vh;
 }
 
 label {
   font-size: 1.5em;
+  padding: 10px 5px 0 5px;
+  border-radius: 5px;
 }
 label:hover {
-  background-color: lightgrey;
+  background-color: #EEE;
+}
+
+#rails > .container > .jumbotron {
+  background-color: #FFEEEE;
+}
+
+#drupal > .container > .jumbotron {
+  background-color: #EEEEFF;
+}
+
+#android > .container > .jumbotron {
+  background-color: #EEFFEE;
 }
