@@ -76,6 +76,20 @@ $(function() {
     }
   }
 
+  var questionSixCount = function() {
+    if($("input:radio[name=question6]:checked").val() === "rails") {
+      railsCount++;
+    } else if ($("input:radio[name=question6]:checked").val() === "drupal") {
+      drupalCount++;
+    } else if ($("input:radio[name=question6]:checked").val() === "android") {
+      androidCount++;
+    } else if ($("input:radio[name=question6]:checked").val() === "design") {
+      designCount++;
+    } else if ($("input:radio[name=question6]:checked").val() === "net") {
+      netCount++;
+    }
+  }
+
   var countAnswer = function() {
     if(railsCount > (drupalCount || androidCount || designCount || netCount)) {
       $("#rails").fadeIn(750);
@@ -128,7 +142,14 @@ $(function() {
 
   $("#questionFiveForm").submit(function(event) {
     $("#questionFive").hide();
-    questionFiveCount();
+    $("#questionSix").fadeIn(750);
+    questionFourCount();
+    event.preventDefault();
+  })
+
+  $("#questionSixForm").submit(function(event) {
+    $("#questionSix").hide();
+    questionSixCount();
     countAnswer();
     event.preventDefault();
   })
