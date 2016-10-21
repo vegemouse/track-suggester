@@ -121,6 +121,7 @@ $(function() {
     $("#android").hide();
     $("#net").hide();
     $("#design").hide();
+    $("#undecided").hide();
     $("#intro").fadeIn(1000);
 
     // Restarts answer count

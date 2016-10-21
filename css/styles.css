@@ -2,6 +2,7 @@ body {
   margin: 0;
   background-color: #FFF;
   color: #444;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -164,6 +165,7 @@ label:hover {
 
 .progress-bar {
   background-color: #4DCACB;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 @media (max-width: 768px) {
