@@ -56,7 +56,13 @@ p {
 
 .btn-primary:active:focus, .btn-primary:active {
   background-color: #4DCACB;
-  border: 1px solid #3CB9BA;
+  border: 2px solid #3CB9BA;
+}
+
+.refresh {
+  background-color: #4DCACB;
+  border: 2px solid #4DCACB;
+  color: white;
 }
 
 #logos {
