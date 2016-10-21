@@ -172,6 +172,15 @@ $(function() {
     $("#net").hide();
     $("#design").hide();
     $("#intro").fadeIn(1000);
+
+    // Restarts answer count
+    railsCount = 0;
+    drupalCount = 0;
+    androidCount = 0;
+    designCount = 0;
+    netCount = 0;
+
+
   })
 
 })
