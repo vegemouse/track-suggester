@@ -112,7 +112,7 @@ $(function() {
   // Front end
   $("#startButton").click(function() {
     $("#intro").hide();
-    $("#questionOne").fadeIn(1000);
+    $("#questionOne").fadeIn(750);
   })
 
   $("#questionOneForm").submit(function(event) {
@@ -158,8 +158,20 @@ $(function() {
     event.preventDefault();
   })
 
+  // "Refreshes" page rather than using 'location.reload()'
   $(".refresh").click(function() {
-    location.reload();
+    $("#questionOne").hide();
+    $("#questionTwo").hide();
+    $("#questionThree").hide();
+    $("#questionFour").hide();
+    $("#questionFive").hide();
+    $("#questionSix").hide();
+    $("#rails").hide();
+    $("#drupal").hide();
+    $("#android").hide();
+    $("#net").hide();
+    $("#design").hide();
+    $("#intro").fadeIn(1000);
   })
 
 })
