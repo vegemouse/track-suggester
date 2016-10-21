@@ -78,57 +78,56 @@ $(function() {
 
   var countAnswer = function() {
     if(railsCount > (drupalCount || androidCount || designCount || netCount)) {
-      $("#rails").show();
+      $("#rails").fadeIn(750);
     } else if (drupalCount > (railsCount || androidCount || designCount || netCount)) {
-      $("#drupal").show();
+      $("#drupal").fadeIn(750);
     } else if (androidCount > (railsCount || drupalCount || designCount || netCount)) {
-      $("#android").show();
+      $("#android").fadeIn(750);
     } else if (designCount > (railsCount || androidCount || drupalCount || netCount)) {
-      $("#design").show();
+      $("#design").fadeIn(750);
     } else if (netCount > (railsCount || androidCount || drupalCount || designCount)) {
-      $("#net").show();
+      $("#net").fadeIn(750);
     } else {
-      $("#undecided").show();
+      $("#undecided").fadeIn(750);
     }
   }
 
   // Front end
   $("#startButton").click(function() {
     $("#intro").hide();
-    $("#questionOne").fadeIn(500);
+    $("#questionOne").fadeIn(750);
   })
 
   $("#questionOneForm").submit(function(event) {
     $("#questionOne").hide();
-    $("#questionTwo").fadeIn(500);
+    $("#questionTwo").fadeIn(750);
     questionOneCount();
     event.preventDefault();
   })
 
   $("#questionTwoForm").submit(function(event) {
     $("#questionTwo").hide();
-    $("#questionThree").fadeIn(500);
+    $("#questionThree").fadeIn(750);
     questionTwoCount();
     event.preventDefault();
   })
 
   $("#questionThreeForm").submit(function(event) {
     $("#questionThree").hide();
-    $("#questionFour").fadeIn(500);
+    $("#questionFour").fadeIn(750);
     questionThreeCount();
     event.preventDefault();
   })
 
   $("#questionFourForm").submit(function(event) {
     $("#questionFour").hide();
-    $("#questionFive").fadeIn(500);
+    $("#questionFive").fadeIn(750);
     questionFourCount();
     event.preventDefault();
   })
 
   $("#questionFiveForm").submit(function(event) {
     $("#questionFive").hide();
-    $("#questionSix").fadeIn(500);
     questionFiveCount();
     countAnswer();
     event.preventDefault();
