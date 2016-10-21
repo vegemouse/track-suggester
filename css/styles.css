@@ -77,10 +77,16 @@ p {
   margin-bottom: 20px;
 }
 
-#questionOne, #questionTwo, #questionThree, #questionFour, #questionFive, #questionSix, #loading, #rails, #drupal, #android, #design, #net, #undecided {
+#questionOne, #questionTwo, #questionThree, #questionFour, #questionFive, #questionSix {
   display: none;
   margin-top: 20vh;
   margin-bottom: 20vh;
+}
+
+#rails, #drupal, #android, #design, #net, #undecided {
+  display: none;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
 }
 
 #intro, #questionOne, #questionTwo, #questionThree, #questionFour, #questionFive, #questionSix {
@@ -157,4 +163,16 @@ label:hover {
 
 .progress-bar {
   background-color: #4DCACB;
+}
+
+@media (max-width: 768px) {
+  #intro, #questionOne, #questionTwo, #questionThree, #questionFour, #questionFive, #questionSix, #rails, #drupal, #android, #design, #net, #undecided {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+
+  button {
+    width: 80%;
+  }
+
 }
