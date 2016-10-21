@@ -194,3 +194,9 @@ label:hover {
     margin: 0 400px 20px 400px;
   }
 }
+
+@media (min-width: 1800px) {
+  #intro p {
+    margin: 0 400px 20px 400px;
+  }
+}
