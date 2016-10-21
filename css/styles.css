@@ -77,7 +77,7 @@ p {
   margin-bottom: 20px;
 }
 
-#questionOne, #questionTwo, #questionThree, #questionFour, #questionFive, #questionSix, #rails, #drupal, #android, #design, #net, #undecided {
+#questionOne, #questionTwo, #questionThree, #questionFour, #questionFive, #questionSix, #loading, #rails, #drupal, #android, #design, #net, #undecided {
   display: none;
   margin-top: 20vh;
   margin-bottom: 20vh;
@@ -99,6 +99,14 @@ label:hover {
   background-color: #EEE;
 }
 
+#loading {
+  background-color: red;
+  width: 500px;
+}
+
+#loading > span {
+  display: none;
+}
 
 #rails > .container > .jumbotron {
   background-color: #FFEEEE;
@@ -140,4 +148,13 @@ label:hover {
   color: #888;
   background-color: white;
   z-index: 10;
+}
+
+.progress {
+  width: 25%;
+  margin: 20px auto 0 auto;
+}
+
+.progress-bar {
+  background-color: #4DCACB;
 }
