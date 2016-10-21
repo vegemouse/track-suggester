@@ -141,7 +141,6 @@ $(function() {
   $("#questionOneForm").submit(function(event) {
     $("#questionOne").hide( "slide", {direction: "left"}, 200);
     $("#questionTwo").delay(250).show( "slide", {direction: "right"}, 200);
-    $("questionTwo").css("display", "inline-block");
     questionOneCount();
     event.preventDefault();
   })
