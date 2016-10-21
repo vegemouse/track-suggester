@@ -45,6 +45,7 @@ p {
   border: 2px solid #00B3B4;
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin-top: 10px;
 }
 
 .btn-primary:hover {
@@ -53,7 +54,7 @@ p {
   border: 2px solid #00B3B4;
 }
 
-.btn-primary:active:focus {
+.btn-primary:active:focus, .btn-primary:active {
   background-color: #4DCACB;
   border: 1px solid #3CB9BA;
 }
@@ -72,15 +73,15 @@ p {
 
 #questionOne, #questionTwo, #questionThree, #questionFour, #questionFive, #questionSix, #rails, #drupal, #android, #design, #net, #undecided {
   display: none;
-  margin-top: 25vh;
-  margin-bottom: 25vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 
 #intro, #questionOne, #questionTwo, #questionThree, #questionFour, #questionFive, #questionSix {
   padding: 1px 20px;
   text-align: center;
-  margin-top: 25vh;
-  margin-bottom: 25vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 
 label {
@@ -92,14 +93,33 @@ label:hover {
   background-color: #EEE;
 }
 
+
 #rails > .container > .jumbotron {
   background-color: #FFEEEE;
+  box-shadow: 20px 20px 20px #CCBBBB;
 }
 
 #drupal > .container > .jumbotron {
   background-color: #EEEEFF;
+  box-shadow: 20px 20px 20px #BBBBCC;
 }
 
 #android > .container > .jumbotron {
   background-color: #EEFFEE;
+  box-shadow: 20px 20px 20px #BBCCBB;
+}
+
+#design > .container > .jumbotron {
+  background-color: #FFEEFF;
+  box-shadow: 20px 20px 20px #CCBBCC;
+}
+
+#net > .container > .jumbotron {
+  background-color: #EEFFFF;
+  box-shadow: 20px 20px 20px #BBCCCC;
+}
+
+#undecided > .container > .jumbotron {
+  background-color: #EEEEEE;
+  box-shadow: 20px 20px 20px #BBBBBB;
 }
