@@ -1,12 +1,14 @@
 $(function() {
+
+  // Set all counts at 0
   var railsCount = 0;
   var drupalCount = 0;
   var androidCount = 0;
   var designCount = 0;
   var netCount = 0;
 
+  // Question functions
   var questionOneCount = function() {
-
     if($("input:radio[name=question1]:checked").val() === "rails") {
       railsCount++;
     } else if ($("input:radio[name=question1]:checked").val() === "drupal") {
@@ -64,15 +66,15 @@ $(function() {
 
   var questionFiveCount = function() {
     if($("input:radio[name=question5]:checked").val() === "rails") {
-      railsCount++;
+      railsCount += 2;
     } else if ($("input:radio[name=question5]:checked").val() === "drupal") {
-      drupalCount++;
+      drupalCount += 2;
     } else if ($("input:radio[name=question5]:checked").val() === "android") {
-      androidCount++;
+      androidCount += 2;
     } else if ($("input:radio[name=question5]:checked").val() === "design") {
-      designCount++;
+      designCount += 2;
     } else if ($("input:radio[name=question5]:checked").val() === "net") {
-      netCount++;
+      netCount += 2;
     }
   }
 
@@ -90,6 +92,7 @@ $(function() {
     }
   }
 
+  // Counts all answers
   var countAnswer = function() {
     if(railsCount > (drupalCount || androidCount || designCount || netCount)) {
       $("#rails").fadeIn(750);
@@ -109,7 +112,7 @@ $(function() {
   // Front end
   $("#startButton").click(function() {
     $("#intro").hide();
-    $("#questionOne").fadeIn(750);
+    $("#questionOne").fadeIn(1000);
   })
 
   $("#questionOneForm").submit(function(event) {
